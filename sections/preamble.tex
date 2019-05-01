@@ -1,0 +1,31 @@
+%file preamble.tex
+\documentclass[11pt,titlepage]{article}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\usepackage[font=small,skip=0pt]{caption}
+\usepackage{appendix}
+
+\usepackage[margin=0.5in]{geometry}
+\pagestyle{myheadings}
+\thispagestyle{empty}
+
+\renewcommand{\title}[1]{
+  \begin{center}
+  {\bf \Large #1}
+  \end{center}
+  \markboth{#1}{#1}
+}
+
+\renewcommand{\author}[1]{
+  \begin{center}
+  {#1}
+  \end{center}
+}

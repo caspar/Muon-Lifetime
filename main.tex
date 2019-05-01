@@ -1,0 +1,54 @@
+\input{sections/preamble.tex}
+\begin{document}
+\graphicspath{{img/}}
+
+\title{Muon Lifetime \\ \small Advanced Lab Spring 2019 \\ \today}
+\vspace{-.5cm}
+\author{Donald Pierce, Caspar Lant, Joseph Corrado}
+
+\begin{multicols}{2}
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/theory}
+\input{sections/methods}
+\input{sections/results_discussion}
+%\input{sections/error_analysis}
+\input{sections/conclusion}
+\input{sections/bibliography}
+
+
+\appendix
+\section{Derivation of the $Y_i$ Distribution}
+Beginning with the assumptions
+\begin{align}
+        X &\approx \textrm{Exp}(\lambda) \\
+        Y &\equiv 2\lambda X
+\end{align}
+Then, 
+\begin{align}
+        F_Y(y) &= \mathbb{P}(Y\leq y)=\mathbb{P}(2\lambda X\leq y) \\
+        & = \mathbb{P}\left(X\leq\frac{y}{2\lambda}\right)=F_X\left(\frac{y}{2\lambda}\right)
+\end{align}
+We know that 
+\begin{align}
+        F_X(x) &= 1-e^{-\lambda x} \\
+        \Rightarrow F_X(\frac{y}{2\lambda}) &= 1-e^{-\frac{\lambda y}{2\lambda}}=1-e^{-y/2}. 
+\end{align}
+Then, 
+\begin{align}
+        f_Y(y)=\frac{\partial F_Y(y)}{\partial y}=\frac{1}{2}e^{-y/2}
+\end{align}
+The $\chi_k^2$ density function (for k degrees of freedom) is given by:
+\begin{align}
+        f_{\chi_k^2}(x)=\frac{1}{2^{k/2}\Gamma(k/2)}x^{k/2-1}e^{-x/2}
+\end{align}
+For $k=2$, this coincides with our density function for $Y$:
+\begin{align}
+        f_{\chi_2^2}(x)=\frac{1}{2}e^{-x/2}
+\end{align}
+
+\end{multicols}
+
+
+\end{document}
